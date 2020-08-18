@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="connection.url">jdbc:mysql://localhost:3306/logistics?serverTimezone=UTC</property>
+    <property name="connection.username">root</property>
+    <property name="connection.password">root</property>
+    <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="show_sql">true</property>
+    <property name="format_sql">true</property>
+    <property name="hibernate.enable_lazy_load_no_trans">true</property>
+    <property name="hbm2ddl.auto">update</property>
+
+    <mapping class = "by.bsuir.courseproject.entity.User"/>
+    <mapping class = "by.bsuir.courseproject.entity.Customer"/>
+    <mapping class = "by.bsuir.courseproject.entity.Worker"/>
+    <mapping class = "by.bsuir.courseproject.entity.Orders"/>
+    <mapping class = "by.bsuir.courseproject.entity.Product"/>
+    <mapping class = "by.bsuir.courseproject.entity.OrderProduct"/>
+    <mapping class = "by.bsuir.courseproject.entity.Warehouse"/>
+    <mapping class = "by.bsuir.courseproject.entity.WarehouseProduct"/>
+
+  </session-factory>
+</hibernate-configuration>
